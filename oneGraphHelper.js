@@ -6,6 +6,8 @@ const {
 } = require('apollo-server-express')
 const { GraphQLNonNull } = require('graphql')
 // Deps
+const jwt = require('jsonwebtoken')
+var jwksClient = require('jwks-rsa')
 
 const atob = str => {
   return Buffer.from(str, 'base64').toString('binary')
